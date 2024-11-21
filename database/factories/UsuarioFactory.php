@@ -21,7 +21,7 @@ class UsuarioFactory extends Factory
         return [
             'nome' => $this->faker->name,
             'email' => $this->faker->unique()->safeEmail(),
-            'senha' => Hash::make(Random::generate(10)),
+            'senha' => Hash::make('senhadeteste123'),
             'papel' => $this->faker->randomElement(['gestor', 'recepcionista']),
             'criado_em' => now(),
             'atualizado_em' => now()

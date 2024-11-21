@@ -2,10 +2,11 @@
 
 namespace App\Models;
 
+use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Usuario extends Model
+class Usuario extends Authenticatable
 {
     use HasFactory;
     protected $table = 'usuarios';
@@ -33,5 +34,16 @@ class Usuario extends Model
             'criado_em' => 'datetime',
             'atualizado_em' => 'datetime'
         ];
+    }
+
+
+    /**
+     * Get the password for the user.
+     *
+     * @return string
+     */
+    public function getAuthPassword()
+    {
+        return $this->senha;
     }
 }
