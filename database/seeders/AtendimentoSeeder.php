@@ -16,13 +16,6 @@ class AtendimentoSeeder extends Seeder
      */
     public function run(): void
     {
-        // Garantir que existam pacientes e dentistas antes de criar os atendimentos
-        $pacientes = Paciente::all();
-        $dentistas = Dentista::all();
-
-        Atendimento::factory()->count(50)->create([
-            'paciente_id' => $pacientes->random()->id,
-            'dentista_id' => $dentistas->random()->id,
-        ]);
+        Atendimento::factory()->count(50)->create();
     }
 }
