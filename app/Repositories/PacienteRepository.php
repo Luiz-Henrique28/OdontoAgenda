@@ -7,7 +7,7 @@ class PacienteRepository
 {
     public function getAll()
     {
-        return Paciente::all()->toArray();
+        return Paciente::all();
     }
 
     public function findById($id)
@@ -30,6 +30,7 @@ class PacienteRepository
     public function delete($id)
     {
         $paciente = $this->findById($id);
+        $paciente->atendimentos()->delete();
         return $paciente->delete();
     }
 }

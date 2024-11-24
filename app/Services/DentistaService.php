@@ -1,35 +1,26 @@
 <?php
-namespace App\Repositories;
+namespace App\Services;
 
 use App\Models\Dentista;
+use App\Repositories\DentistaRepository;
 
-class DentistaRepository
+class DentistaService
 {
-    public function getAll()
+
+    private $dentistaRepository;
+
+    public function __construct(DentistaRepository $dentistaRepository)
     {
-        return Dentista::all();
+        $this->dentistaRepository = $dentistaRepository;
     }
 
-    public function findById($id)
+    public function listarDentistas()
     {
-        return Dentista::findOrFail($id);
+        return $this->dentistaRepository->getAll();
     }
 
-    public function create(array $data)
+    public function excluirPaciente($id)
     {
-        return Dentista::create($data);
-    }
-
-    public function update($id, array $data)
-    {
-        $dentista = $this->findById($id);
-        $dentista->update($data);
-        return $dentista;
-    }
-
-    public function delete($id)
-    {
-        $dentista = $this->findById($id);
-        return $dentista->delete();
+        return $this->dentistaRepository->delete($id);
     }
 }

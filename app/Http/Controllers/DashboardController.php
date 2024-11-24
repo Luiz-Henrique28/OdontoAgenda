@@ -20,6 +20,6 @@ class DashboardController extends Controller
     {
         $dados = $this->dashboardService->getDashboardData();
 
-        return view('dashboard',  compact('dados'));
+        return view('index/dashboard',  compact('dados'));
     }
 }

@@ -31,6 +31,7 @@ class DentistaRepository
     public function delete($id)
     {
         $dentista = $this->findById($id);
+        $dentista->atendimentos()->delete();
         return $dentista->delete();
     }
 }
