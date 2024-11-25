@@ -12,6 +12,7 @@
 
                     <div class="container mx-auto p-2 overflow-x-auto">
                         <div class="flex flex-wrap gap-4">
+                            
                             <!-- Card 1 -->
                             <div class="bg-white shadow-md rounded-lg p-6 w-full sm:w-1/2 lg:w-1/4 
                             cursor-pointer hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500"

@@ -44,7 +44,7 @@ CREATE TABLE atendimentos (
     descricao TEXT,
     data_inicio DATE NOT NULL,
     data_fim DATE,
-    status ENUM('agendado', 'cancelado', 'concluido', 'em andamento') DEFAULT 'agendado',
+    status ENUM('agendado', 'cancelado', 'concluido', 'andamento') DEFAULT 'agendado',
     observacoes TEXT,
     criado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     atualizado_em TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,

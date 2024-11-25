@@ -5,9 +5,19 @@
         </h2>
     </x-slot>
 
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="mt-8 flex items-center justify-center bg-gray-100 mt-4">
         <div class="p-6 bg-white shadow-lg rounded-lg max-w-2xl w-full">
             <h1 class="text-2xl font-bold mb-6 text-gray-800">Novo Paciente</h1>
+
+            @if ($errors->any())
+                <div class="mb-4 bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
+                    <ul class="list-disc pl-5">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
             <form method="POST" action="{{ route('paciente.store') }}" class="space-y-6">
                 @csrf

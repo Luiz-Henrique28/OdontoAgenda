@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="mt-8 flex items-center justify-center bg-gray-100">
         <div class="p-6 bg-white shadow-lg rounded-lg max-w-2xl w-full">
             <h1 class="text-2xl font-bold mb-6 text-gray-800">Editar Dentista</h1>
 
@@ -62,13 +62,13 @@
                 <!-- Botões -->
                 <div class="flex justify-between">
                     <a
-                        href="{{ route('dashboard') }}"
+                        href="{{ route('dentistas.index') }}"
                         class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                         Cancelar
                     </a>
                     <button
                         type="submit"
-                        class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                        class="inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500">
                         Salvar Alterações
                     </button>
                 </div>

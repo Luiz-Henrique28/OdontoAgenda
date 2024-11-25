@@ -47,7 +47,8 @@ class PacienteController extends Controller
 
         Paciente::create($validated);
 
-        return redirect()->route('dentistas.index')
+        return redirect()
+            ->route('pacientes.index')
             ->with('success', 'Paciente cadastrado com sucesso!');
     }
 

@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\DentistaController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PacienteController;
+use App\Models\Atendimento;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('auth')->group(function () {
@@ -32,9 +33,15 @@ Route::middleware('auth')->group(function () {
         'store' => 'dentista.store',
     ]);
 
-    Route::resource('atendimento', AtendimentoController::class)->names([
+    Route::resource('atendimentos', AtendimentoController::class)
+    ->except(['show'])
+    ->names([
         'index' => 'atendimentos.index',
-        
+        'update' => 'atendimento.update',
+        'edit' => 'atendimento.edit',
+        'destroy' => 'atendimento.delete',
+        'create' => 'atendimento.create',
+        'store' => 'atendimento.store'
     ]);
 });
 

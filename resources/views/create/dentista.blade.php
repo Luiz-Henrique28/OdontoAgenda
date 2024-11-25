@@ -5,7 +5,7 @@
         </h2>
     </x-slot>
 
-    <div class="min-h-screen flex items-center justify-center bg-gray-100">
+    <div class="mt-8 flex items-center justify-center bg-gray-100">
         <div class="p-6 bg-white shadow-lg rounded-lg max-w-2xl w-full">
             <h1 class="text-2xl font-bold mb-6 text-gray-800">Novo Dentista</h1>
 
